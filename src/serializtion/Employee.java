@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author cyrilelijahaurino
  */
 public class Employee implements Serializable{
-    transient int id;//if marked transient it will be serialized
+    transient int id;//if marked transient it will not be serialized
     transient String name;
     String address;
     double salary;

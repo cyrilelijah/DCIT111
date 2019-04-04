@@ -25,7 +25,7 @@ public class TestByteStream {
         file.createNewFile();
         System.out.println(file.getAbsolutePath());
         File file2 = new File("output.txt");
-//        file2 .createNewFile();
+        file2 .createNewFile();
         try {
             in = new FileInputStream(file.getAbsolutePath());
             out = new FileOutputStream(file2.getAbsolutePath());

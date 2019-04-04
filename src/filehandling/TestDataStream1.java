@@ -6,13 +6,10 @@
 package filehandling;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -20,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author cyrilelijahaurino
  */
-public class TestDataStream {
+public class TestDataStream1 {
 
     public static void main(String[] args) {
         File file = new File("dataStream.txt");
@@ -61,7 +58,7 @@ public class TestDataStream {
                 i.add(dataIn.readInt());
                 double d = dataIn.readDouble();
                 System.out.println(utf);
-            }            
+            }
             System.out.println(i);
 //            dataIn.close();
         } catch (FileNotFoundException ex) {
@@ -70,7 +67,9 @@ public class TestDataStream {
             System.err.println(ex);
         } finally {
             try {
-                dataIn.close();
+                if (dataIn != null) {
+                    dataIn.close();
+                }
             } catch (IOException ex) {
                 System.err.println(ex);
             }
