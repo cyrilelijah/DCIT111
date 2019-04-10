@@ -23,7 +23,7 @@ public class TCPServerV1 {
     public static void main(String[] args) {
         try {
             ServerSocket server = new ServerSocket(port);
-            server.setSoTimeout(timeOut);
+//            server.setSoTimeout(timeOut);
             InetAddress address = InetAddress.getLocalHost();//get the address 
             System.out.println("Server is running on " + address);
             

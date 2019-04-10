@@ -28,7 +28,7 @@ public class TPCServerV2 {
         BufferedReader bw = null;
         try {
             server = new ServerSocket(port);
-            server.setSoTimeout(timeOut);
+//            server.setSoTimeout(timeOut);
 //            server.bind(new InetSocketAddress(port));
             InetAddress myAddress = InetAddress.getLocalHost();//get the address
             System.out.println("Host name: " + myAddress);
