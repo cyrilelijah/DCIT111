@@ -14,7 +14,6 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,10 +23,10 @@ import java.util.logging.Logger;
  */
 public class Sender {
 
-    private static final int BUFF_SIZE = 1024;
     private static BufferedReader reader = new BufferedReader(
             new InputStreamReader(System.in));
     private static DatagramSocket socket;
+    private static final int BUFF_SIZE = 1024;
 
     public static void main(String[] args) throws IOException {
         try {

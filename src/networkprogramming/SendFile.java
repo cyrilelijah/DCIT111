@@ -20,7 +20,7 @@ import java.util.Scanner;
  */
 public class SendFile {//on going development and testing
 
-    private static final int port = 21;
+    private static final int port = 1024;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

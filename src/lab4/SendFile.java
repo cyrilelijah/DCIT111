@@ -19,7 +19,9 @@ import java.util.Scanner;
  * @author cyrilelijahaurino
  */
 public class SendFile {
+
     private static final int port = 1024;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter path of the file: ");
@@ -36,10 +38,10 @@ public class SendFile {
 
     private static void send(File file, String host) throws IOException {
         String fiLe = file.getAbsolutePath();
-        String fileName = fiLe.substring(fiLe.lastIndexOf("\\")+1, fiLe.length())+"$";
+        String fileName = fiLe.substring(fiLe.lastIndexOf("\\") + 1, fiLe.length()) + "$";
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress(host, port));
-        
+
         FileInputStream in = null;
         OutputStream out = null;
         try {
