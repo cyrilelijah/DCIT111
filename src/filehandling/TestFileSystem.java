@@ -5,6 +5,7 @@
  */
 package filehandling;
 
+import java.io.File;
 import java.nio.file.FileStore;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
@@ -15,14 +16,20 @@ import java.util.Iterator;
  * @author cyrilelijahaurino
  */
 public class TestFileSystem {
+
     public static void main(String[] args) {
         FileSystem fs = FileSystems.getDefault();
-        
+
         Iterable<FileStore> it = fs.getFileStores();
-        
+
         for (Iterator iterator = it.iterator(); iterator.hasNext();) {
             Object next = iterator.next();
             System.err.println(next);
+        }
+
+        File[] drives = File.listRoots();
+        for (int i = 0; i < drives.length; i++) {
+            System.out.println(drives[i]);
         }
     }
 }
